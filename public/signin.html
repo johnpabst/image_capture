@@ -26,7 +26,7 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			  <ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-				  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+				  <a class="nav-link" href="index.html">Home </a>
 				</li>
 				<li class="nav-item">
 				  <a class="nav-link" href="scan.html">Scan</a>
@@ -40,20 +40,29 @@
 			  </ul>
 			  <form class="form-inline my-2 my-lg-0">
 				<a href="register.html" class="btn btn-primary" style="margin-right: 10px;">Register</a>
-				<a href="signin.html" class="btn btn-outline-success my-2 my-sm-0">Login</a>
+				<a class="btn btn-outline-success my-2 my-sm-0">Login<span class="sr-only">(current)</span></a>
 			  </form>
 			</div>
 		  </nav>
-
-		  <div class="jumbotron">
-			<h1 class="display-4">Welcome to Portfoil.io!</h1>
-			<p class="lead">This is the new web-based UI. We switched so that you can use our platform on mobile and desktop as well.</p>
-			<hr class="my-4">
-			<p>Overhauled UI coming soon!</p>
-			<p class="lead">
-			  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-			</p>
-		  </div>
+          <form action="action_page.php">
+            <div class="container">
+              <h1>Sign In</h1>
+              <hr>
+          
+              <label for="email"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="email" id="email" required>
+              <hr>
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+              <hr>
+          
+              <button type="submit" class="btn btn-primary">Sign In</button>
+            </div>
+          
+            <div class="container signin">
+              <p>Don't have an account? <a href="register.html">Register</a>.</p>
+            </div>
+          </form>
 	</body>
 </html>
 

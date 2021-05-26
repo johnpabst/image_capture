@@ -43,6 +43,7 @@ $(document).ready(function() {
     var cameraOutputData = $("#camera_output");
     var imageTriggerBtn = $("#image_trigger")
     var submittedBtn = $("#submitted");
+    var cardIdentity = $("#card-identity");
 
     cameraTriggerBtn.click(function () {
         imageTriggerBtn.show();
@@ -53,9 +54,21 @@ $(document).ready(function() {
             image_data: cameraOutputData.prop('src')
         }, function(data, status) {
             //imageTriggerBtn.hide();
-            submittedBtn.show().delay(500).fadeOut();
+            //submittedBtn.show().delay(500).fadeOut();
+            alert(data);
+            $("#card-identity").innerHTML = "Hello World!";
+            cardIdentity.show();
             console.table(status);
             console.table(data);
+        })
+        .done(function(data) {
+            alert( " success " + data );
+          })
+        .fail(function() {
+            alert( "error" );
+        })
+        .always(function(data) {
+            alert( "finished " + JSON.stringify(data));
         });
     });
 

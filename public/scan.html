@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang=”en”>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Name of the app -->
+		<title>Camera App</title>
+
+		<!-- Link to main style sheet -->
+		<link rel="stylesheet" href="scan.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+	<body>
+
+		<!-- Camera -->
+		<main id="camera">
+
+			<!-- Camera sensor -->
+			<canvas id="camera_sensor"></canvas>
+
+			<!-- Camera view -->
+			<video id="camera_view" autoplay playsinline></video>
+
+			<!-- Camera output -->
+			<img src="//:0" alt="" id="camera_output">
+
+			<a id="home_button" href="index.html">Home</a>
+
+			<!-- Camera trigger -->
+			<button id="camera_trigger">Take a picture</button>
+
+			<!-- Submit Image trigger -->
+			<button id="image_trigger" style="display: none;">Submit picture</button>
+
+			<!-- Submitted Button Response -->
+			<button id="submitted" style="display: none;">Submitted</button>
+
+			<!-- Submitted Button Response -->
+			<div id="card-identity" style="display: none;"></div>
+		</main>
+
+		<!-- Reference to your JavaScript file -->
+		<script src="app.js"></script>
+	</body>
+</html>
+
